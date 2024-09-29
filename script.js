@@ -55,7 +55,7 @@ function validateFName(){
         fnameError.innerHTML = ' **First Name is required';
         return false;
     }
-    if(!fname.match(/^[A-Za-z]*$/)){
+    if(!fname.match(/^[A-Za-z\s]*$/)){
         fnameError.innerHTML = ' **Numeric is not allowed';
         return false;
     }
@@ -79,7 +79,7 @@ function validateLName(){
         lnameError.innerHTML = ' **Last Name is required';
         return false;
     }
-    if(!lname.match(/^[A-Za-z]*$/)){
+    if(!lname.match(/^[A-Za-z\s]*$/)){
         lnameError.innerHTML = ' **Numeric is not allowed';
         return false;
     }
