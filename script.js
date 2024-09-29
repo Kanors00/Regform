@@ -147,7 +147,7 @@ function validatePhone(){
         mobileError.innerHTML = ' **Phone Number should be 11 digits';
         return false;
     }
-    if(!phoneNum.match(/^[0-9]{10}$/)){
+    if(!phoneNum.match(/^[0-9]{11}$/)){
         mobileError.innerHTML = ' **Only digits please';
         return false;
     }
@@ -264,7 +264,8 @@ function validateForm(){
 
 var addressObject = {
     "Philippines": {
-        "Metro Manila": ["Quezon City", "Caloocan", "Manila", "Makati", "Taguig", "Marikina"],
+        "National Capital Region": ["Quezon City", "Caloocan", "Manila", "Makati", "Taguig", "Muntinlupa", 
+                                    "Navotas", "Malabon", "Marikina", "Pasay", "Pasig", "Las Piñas", "Parañaque", "San Juan", "Pateros"],
         "CALABARZON": ["Cavite", "Laguna", "Batangas", "Rizal", "Quezon"],
         "Region III": ["Aurora", "Bataan", "Bulacan", "Nueva Ecija", "Pampanga", "Tarlac", "Zambales"],    
        
