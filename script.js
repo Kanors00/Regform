@@ -59,8 +59,8 @@ function validateFName(){
         fnameError.innerHTML = ' **Numeric is not allowed';
         return false;
     }
-    if(fname.length < 3){
-        fnameError.innerHTML = ' **Minimum 3 char required';
+    if(fname.length < 2){
+        fnameError.innerHTML = ' **Minimum 2 char required';
         return false;
     }
     if(fname.length > 20){
@@ -83,8 +83,8 @@ function validateLName(){
         lnameError.innerHTML = ' **Numeric is not allowed';
         return false;
     }
-    if(lname.length < 3){
-        lnameError.innerHTML = ' **Minimum 3 char required';
+    if(lname.length < 2){
+        lnameError.innerHTML = ' **Minimum 2 char required';
         return false;
     }
     if(lname.length > 20){
@@ -143,8 +143,8 @@ function validatePhone(){
         mobileError.innerHTML = ' **Phone number is required';
         return false;
     }
-    if(phoneNum.length !== 10){
-        mobileError.innerHTML = ' **Phone Number should be of 10 digits';
+    if(phoneNum.length !== 11){
+        mobileError.innerHTML = ' **Phone Number should be 11 digits';
         return false;
     }
     if(!phoneNum.match(/^[0-9]{10}$/)){
@@ -184,7 +184,7 @@ function validateState(){
     var stateName = document.getElementById('state-name').value;
 
     if(stateName == ""){
-        stateError.innerHTML = ' **State name required';
+        stateError.innerHTML = ' **Region name required';
         return false;
     }
     stateError.innerHTML = '<img src="Checkmark.png" alt="">';
@@ -211,11 +211,11 @@ function validatePinCode(){
         pinCodeError.innerHTML = ' **PinCode is required';
         return false;
     }
-    if(pinCode.length !== 6){
-        pinCodeError.innerHTML = ' **PinCode should be of 6 digits';
+    if(pinCode.length !== 4){
+        pinCodeError.innerHTML = ' **PinCode should be of 4 digits';
         return false;
     }
-    if(!pinCode.match(/^[0-9]{6}$/)){
+    if(!pinCode.match(/^[0-9]{4}$/)){
         pinCodeError.innerHTML = ' **Only digits please';
         return false;
     }
@@ -265,19 +265,12 @@ function validateForm(){
 var addressObject = {
     "Philippines": {
         "Metro Manila": ["Quezon City", "Caloocan", "Manila", "Makati", "Taguig", "Marikina"],
-        "Ilocos": ["Ilocos Sur", "Ilocos Norte"],
-        "Himachal Pradesh": ["Kangra", "Kullu", "Mandi", "Shimla", "Lahaul and Spiti", "Kinnaur"],    
-        "Kerela": ["Kollam", "Malappuram", "Thiruvananthapuram", "Kannur", "Palakkad"],    
-        "Tripura": ["Dhalai", "North Tripura", "South Tripura", "West Tripura"],    
-        "Sikkim": ["Gangtok", "Mangan", "Namchi", "Geyzing", "Pakyong", "Soreng"],   
-        "West Bengal": ["Malda", "Alipurduar", "Howrah", "Kolkata", "Bankura", "Nadia"],
-        "Delhi": ["Central Delhi", "East Delhi", "New Delhi", "North Delhi", "South Delhi", "West Delhi"]        
+        "CALABARZON": ["Cavite", "Laguna", "Batangas", "Rizal", "Quezon"],
+        "Region III": ["Aurora", "Bataan", "Bulacan", "Nueva Ecija", "Pampanga", "Tarlac", "Zambales"],    
+       
       },
       "USA": {
-        "Arizona": ["Gila", "Yuma", "Apache", "Mohave", "Santa Cruz", "Greenlee"],
         "California": ["San Francisco", "Los Angeles", "Sacramento", "San Diego", "Riverside", "San Jose"],
-        "Georgia": ["Atlanta", "Augusta", "Columbus", "Savannah"],
-        "Michigan": ["Watersmeet", "Holland", "Flint", "Holly", "Dearborn"],
         "New York": ["Shirley", "Brooklyn", "Manhattan", "Bronx", "Yonkers"],
         "Washington": ["Pierce", "Yakima", "Thurston", "Snohomish"],
         "New Mexico": ["Alamogordo", "Santa Fe", "Albuquerque"]
@@ -287,8 +280,5 @@ var addressObject = {
           "Khulna": ["Bagerhat", "Jashore", "Khulna", "Narail", "Satkhira", "Meherpur"],
           "Rajshahi": ["Natore", "Sirajganj", "Pabna", "Bogura", "Naogaon", "Joypurhat"],
           "Rangpur": ["Dinajpur", "Kurigram", "Rangpur", "Thakurgaon", "Panchagarh", "Gaibandha"],
-          "Sylhet": ["Habiganj", "Moulvibazar", "Sunamganj", "Sylhet"],
-          "Dhaka": ["Gazipur", "Tangail", "Rajbari", "Gopalganj", "Faridpur", "Narayanganj"],
-          "Chittagong": ["Rangamati", "Cox's Bazar", "Chattogram", "Lakshmipur", "Chandpur", "Brahmanbaria"]
       }
 }
