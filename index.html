@@ -68,6 +68,14 @@
             <span id="state-error"></span>
           </div> 
 
+            <div class="input-group">
+            <label><strong>City:</strong></label>
+            <select name="City" id="city-name" onclick="validateCity()">
+              <option value="" selected="selected">Please Select City</option>
+            </select>
+            <span id="city-error"></span>
+          </div> 
+
           <div class="input-group">
             <label><strong>Complete Address:</strong></label>
             <input type="text" placeholder="Enter Your Complete Address" id="address" onkeyup="validateAddress()">
@@ -78,16 +86,6 @@
             <label><strong>Postal Code:</strong></label>
             <input type="text" placeholder="Enter Your Postal Code" id="pincode" onkeyup="validatePinCode()">
             <span id="pin-error"></span>
-          </div> 
-
-          
-
-          <div class="input-group">
-            <label><strong>City:</strong></label>
-            <select name="City" id="city-name" onclick="validateCity()">
-              <option value="" selected="selected">Please Select City</option>
-            </select>
-            <span id="city-error"></span>
           </div> 
     
           <div class="input-group">
