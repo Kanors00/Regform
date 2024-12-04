@@ -5,41 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="ACLC.jpg" type="image/x-icon" />
     <title>Registration Form</title>
 </head>
 <body>
 
     <div class="form-container">
         <h1>Student Registration Form</h1>
-        <form action="registration-success.html">
+        <form action="connect.php" method="POST">
           <div class="input-group">
             <label><strong>First Name:</strong></label>
-            <input type="text" placeholder="Enter Your First Name" id="fname" onkeyup="validateFName()">
+            <input type="text" placeholder="Enter Your First Name" id="fname" onkeyup="validateFName()" 
+            name="firstname">
             <span id="fname-error"></span>
           </div>
     
           <div class="input-group">
             <label><strong>Last Name:</strong></label>
-            <input type="text" placeholder="Enter Your Last Name" id="lname" onkeyup="validateLName()">
+            <input type="text" placeholder="Enter Your Last Name" id="lname" onkeyup="validateLName()"
+            name="lastname">
             <span id="lname-error"></span>
           </div>
     
           <div class="input-group">
             <label><strong>Date of Birth:</strong></label>
-            <input type="date" id="dob" onchange="validateDOB()">
+            <input type="date" id="dob" onchange="validateDOB()" name="birthdate" value="Birth Date">
             <span id="dob-error"></span>
           </div> 
 
           <div class="input-group">
             <label><strong>Email:</strong></label>
-            <input type="email" placeholder="Enter Your Email Address" id="email-id" onkeyup="validateEmail()">
+            <input type="email" placeholder="Enter Your Email Address" id="email-id" onkeyup="validateEmail()"
+            name="email">
             <span id="email-error"></span>
           </div>
 
           <div class="input-group">
             <label><strong>Mobile No.:</strong></label>
-            <input type="tel" placeholder="Enter your mobile number" id="phone-no" onkeyup="validatePhone()">
+            <input type="tel" placeholder="Enter your mobile number" id="phone-no" onkeyup="validatePhone()" 
+            name="number">
             <span id="mobile-error"></span>
           </div>
 
@@ -63,38 +66,40 @@
           <div class="input-group">
             <label><strong>Region:</strong></label>
             <select name="state" id="state-name" onclick="validateState()">
-              <option value="" selected="selected">Select Region first</option>
+              <option value="" selected="selected">Select Region First</option>
             </select>
             <span id="state-error"></span>
           </div> 
 
-            <div class="input-group">
+          <div class="input-group">
             <label><strong>City:</strong></label>
             <select name="City" id="city-name" onclick="validateCity()">
-              <option value="" selected="selected">Please Select City</option>
+              <option value="" selected="selected">Please select City</option>
             </select>
             <span id="city-error"></span>
           </div> 
 
           <div class="input-group">
             <label><strong>Complete Address:</strong></label>
-            <input type="text" placeholder="Enter Your Complete Address" id="address" onkeyup="validateAddress()">
+            <input type="text" placeholder="Enter Your Complete Address" id="address" onkeyup="validateAddress()"
+            name="address">
             <span id="address-error"></span>
           </div>
 
           <div class="input-group">
             <label><strong>Postal Code:</strong></label>
-            <input type="text" placeholder="Enter Your Postal Code" id="pincode" onkeyup="validatePinCode()">
+            <input type="text" placeholder="Enter Your Postal Code" id="pincode" onkeyup="validatePinCode()"
+            name="pincode">
             <span id="pin-error"></span>
           </div> 
-    
-          <div class="input-group">
+
+          <!--<div class="input-group">
             <label><strong>Hobbies:</strong></label>
-            <textarea rows="5" placeholder="Share Your Hobbies" id="hobbies" onkeyup="validateHobbies()"></textarea>
+            <textarea rows="5" placeholder="Enter Your Hobbies" id="hobbies" onkeyup="validateHobbies()"></textarea>
             <span id="hobbies-error"></span>
-          </div>
+          </div>-->
     
-        <button onclick="return validateForm()">Submit</button>
+        <button name="submit" onclick="return validateForm()">Submit</button>
         <span id="submit-error"></span>
        
       </form>
